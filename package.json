@@ -1,0 +1,23 @@
+{
+  "name": "redis-docker",
+  "version": "1.0.0",
+  "description": "```bash curl --header \"Content-type: application/json\" --request POST --data '{\"from\":\"publisher 1\",\"message\":\"hello subscribers\"}' http://localhost:3030",
+  "main": "publisher.js",
+  "scripts": {
+    "run:pub": "node publisher.js",
+    "run:sub1": "node subscriber_1.js",
+    "run:sub2": "node subscriber_2.js",
+    "run:stream_publisher": "node stream_publisher.js",
+    "run:stream_reader": "node stream_reader.js",
+    "run:subs": "concurrently \"npm run run:sub1\" \"npm run run:sub2\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.5",
+    "express": "^4.19.2",
+    "ioredis": "^5.4.1",
+    "redis": "^4.6.13"
+  }
+}
